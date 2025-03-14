@@ -27,11 +27,37 @@
 
         header {
             background-color: #333;
-            color: white;
-            padding: 1rem 0;
+            color: green;
+            padding: 0; /* Quitar el padding del header */
             text-align: center;
-            background-image: url('fondobandera.jpg') ;
-        }
+            }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            background-image: url('zonamotos3.jpg');
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 16/9; /* Proporción para que se vea bien en cualquier dispositivo */
+            }
+
+       header p {
+            margin: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor lectura */
+            color: white;
+            }
+
+@media (max-width: 600px) {
+    .header-image {
+        aspect-ratio: 4/3; /* Ajuste de proporción en dispositivos pequeños */
+    }
+    header p {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+}
+
 
         nav {
     display: flex;
@@ -149,9 +175,10 @@ nav a:hover {
 </head>
 <body>
     <header>
-        <h1>Zona Motos</h1>
+        <div class="header-image"></div>
         <p>Tu tienda de confianza para repuestos de motos</p>
     </header>
+
 
     <nav>
         <a href="#pistones">Pistones</a>
