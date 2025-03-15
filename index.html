@@ -30,7 +30,7 @@
             color: green;
             padding: 0; /* Quitar el padding del header */
             text-align: center;
-            }
+        }
 
         .header-image {
             width: 100%;
@@ -39,49 +39,47 @@
             background-size: cover;
             background-position: center;
             aspect-ratio: 16/9; /* Proporción para que se vea bien en cualquier dispositivo */
-            }
+        }
 
-       header p {
+        header p {
             margin: 0;
             padding: 1rem;
             background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor lectura */
             color: white;
+        }
+
+        @media (max-width: 600px) {
+            .header-image {
+                aspect-ratio: 4/3; /* Ajuste de proporción en dispositivos pequeños */
             }
-
-@media (max-width: 600px) {
-    .header-image {
-        aspect-ratio: 4/3; /* Ajuste de proporción en dispositivos pequeños */
-    }
-    header p {
-        font-size: 14px;
-        padding: 0.5rem;
-    }
-}
-
+            header p {
+                font-size: 14px;
+                padding: 0.5rem;
+            }
+        }
 
         nav {
-    display: flex;
-    justify-content: flex-start; /* Alinear elementos a la izquierda */
-    background-color: #444;
-    overflow-x: auto; /* Permitir desplazamiento si hay muchos elementos */
-    padding: 0.5rem 1rem;
-    gap: 10px; /* Espaciado entre enlaces */
-    white-space: nowrap;
-}
+            display: flex;
+            justify-content: flex-start; /* Alinear elementos a la izquierda */
+            background-color: #444;
+            overflow-x: auto; /* Permitir desplazamiento si hay muchos elementos */
+            padding: 0.5rem 1rem;
+            gap: 10px; /* Espaciado entre enlaces */
+            white-space: nowrap;
+        }
 
-nav a {
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    text-align: center;
-    font-size: 16px;
-    min-width: fit-content;
-}
+        nav a {
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            min-width: fit-content;
+        }
 
-nav a:hover {
-    background-color: #555;
-}
-
+        nav a:hover {
+            background-color: #555;
+        }
 
         main {
             padding: 2rem;
@@ -101,17 +99,65 @@ nav a:hover {
             width: 300px;
             height: 250px;
             background-size: cover;
-            animation: cambiarImagen 12s infinite;
+            margin-right: 1rem;
         }
 
         .product img {
             width: 100%;
             max-width: 100%;
             height: auto;
-            margin-right: 1rem;
         }
 
-        @keyframes cambiarImagen {
+        /* Animación de imágenes para cada producto */
+        @keyframes cambiarImagenPistones {
+            0%, 33% {
+                background-image: url('piston1.jpg');
+            }
+            34%, 66% {
+                background-image: url('piston2.jpg');
+            }
+            67%, 100% {
+                background-image: url('piston1.jpg');
+            }
+        }
+
+        @keyframes cambiarImagenTornillos {
+            0%, 33% {
+                background-image: url('tornillo1.jpg');
+            }
+            34%, 66% {
+                background-image: url('tornillo2.jpg');
+            }
+            67%, 100% {
+                background-image: url('tornillo3.jpg');
+            }
+        }
+
+        @keyframes cambiarImagenCamaras {
+            0%, 33% {
+                background-image: url('camara1.jpg');
+            }
+            34%, 66% {
+                background-image: url('camara2.jpg');
+            }
+            67%, 100% {
+                background-image: url('camara.jpg');
+            }
+        }
+
+        @keyframes cambiarImagenFiltros {
+            0%, 33% {
+                background-image: url('filtro1.jpg');
+            }
+            34%, 66% {
+                background-image: url('filtro2.jpg');
+            }
+            67%, 100% {
+                background-image: url('filtro3.jpg');
+            }
+        }
+
+        @keyframes cambiarImagenFundas {
             0%, 33% {
                 background-image: url('fundas1.jpg');
             }
@@ -121,14 +167,6 @@ nav a:hover {
             67%, 100% {
                 background-image: url('fundas3.jpg');
             }
-        }
-
-        /* Animación de imágenes para indumentaria */
-        .indumentaria-image {
-            width: 300px;
-            height: 250px;
-            background-size: cover;
-            animation: cambiarImagenIndumentaria 12s infinite;
         }
 
         @keyframes cambiarImagenIndumentaria {
@@ -179,7 +217,6 @@ nav a:hover {
         <p>Tu tienda de confianza para repuestos de motos</p>
     </header>
 
-
     <nav>
         <a href="#pistones">Pistones</a>
         <a href="#tornillos">Tornillos</a>
@@ -191,7 +228,7 @@ nav a:hover {
 
     <main>
         <section id="pistones" class="product">
-            <img src="https://via.placeholder.com/100" alt="Pistones">
+            <div class="product-image" style="animation: cambiarImagenPistones 12s infinite;"></div>
             <div>
                 <h2>Pistones</h2>
                 <p>Descripción de los pistones disponibles.</p>
@@ -199,7 +236,7 @@ nav a:hover {
         </section>
 
         <section id="tornillos" class="product">
-            <img src="https://via.placeholder.com/100" alt="Tornillos">
+            <div class="product-image" style="animation: cambiarImagenTornillos 12s infinite;"></div>
             <div>
                 <h2>Tornillos</h2>
                 <p>Descripción de los tornillos disponibles.</p>
@@ -207,7 +244,7 @@ nav a:hover {
         </section>
 
         <section id="camaras" class="product">
-            <img src="https://via.placeholder.com/100" alt="Cámaras">
+            <div class="product-image" style="animation: cambiarImagenCamaras 12s infinite;"></div>
             <div>
                 <h2>Cámaras</h2>
                 <p>Descripción de las cámaras disponibles.</p>
@@ -215,7 +252,7 @@ nav a:hover {
         </section>
 
         <section id="filtros" class="product">
-            <img src="https://via.placeholder.com/100" alt="Filtros de Aire">
+            <div class="product-image" style="animation: cambiarImagenFiltros 12s infinite;"></div>
             <div>
                 <h2>Filtros de Aire</h2>
                 <p>Descripción de los filtros de aire disponibles.</p>
@@ -223,7 +260,7 @@ nav a:hover {
         </section>
 
         <section id="fundas" class="product">
-            <div class="product-image" alt="Fundas"></div>
+            <div class="product-image" style="animation: cambiarImagenFundas 12s infinite;"></div>
             <div>
                 <h2>Fundas para Motos</h2>
                 <p>Vendemos y colocamos fundas de asientos para motos Honda, Yamaha, Zanella, Gilera, Motomel y Corven. Consulta por más modelos.</p>
@@ -231,7 +268,7 @@ nav a:hover {
         </section>
 
         <section id="indumentaria" class="product">
-            <div class="indumentaria-image" alt="Indumentaria"></div>
+            <div class="product-image" style="animation: cambiarImagenIndumentaria 12s infinite;"></div>
             <div>
                 <h2>Indumentaria para Motociclistas</h2>
                 <p>Ofrecemos chaquetas y buzos para motociclistas. Diseños resistentes y cómodos para cualquier clima.</p>
