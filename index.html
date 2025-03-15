@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Venta de repuestos de moto: pistones, tornillos, cámaras, cuellos de carburador de aire y fundas para motos. ¡Encuentra todo lo que necesitas para tu motocicleta!">
+    <meta name="description" content="Venta de repuestos de moto: pistones, transmisión, cámaras, cuellodecarburador de aire y fundas para motos. ¡Encuentra todo lo que necesitas para tu motocicleta!">
     <title>Zona Motos - Repuestos para Motos</title>
     <style>
         body {
@@ -35,7 +36,7 @@
         .header-image {
             width: 100%;
             height: auto;
-            background-image: url('zonamotos3.jpg');
+            background-image: url('zonamotos.jpg');
             background-size: cover;
             background-position: center;
             aspect-ratio: 16/9; /* Proporción para que se vea bien en cualquier dispositivo */
@@ -93,6 +94,7 @@
             background-color: white;
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
 
         .product-image {
@@ -121,7 +123,7 @@
             }
         }
 
-        @keyframes cambiarImagenTornillos {
+        @keyframes cambiarImagentransmisión {
             0%, 33% {
                 background-image: url('transmisiónriffel.jpg');
             }
@@ -135,7 +137,7 @@
 
         @keyframes cambiarImagenCamaras {
             0%, 33% {
-                background-image: url('cámaras.jpgc');
+                background-image: url('cámaras.jpg');
             }
             34%, 66% {
                 background-image: url('cámaras.jpg');
@@ -145,15 +147,15 @@
             }
         }
 
-        @keyframes cambiarImagencuellos de carburador {
+        @keyframes cambiarImagencuellodecarburador {
             0%, 33% {
                 background-image: url('venturis.jpg');
             }
             34%, 66% {
-                background-image: url('cuellocarburado1.jpg');
+                background-image: url('Cuellocarburado1.jpg');
             }
             67%, 100% {
-                background-image: url('cuellocarburador.jpg');
+                background-image: url('Cuellocarburador.jpg');
             }
         }
 
@@ -219,9 +221,9 @@
 
     <nav>
         <a href="#pistones">Pistones</a>
-        <a href="#tornillos">Tornillos</a>
+        <a href="#transmisión">transmisión</a>
         <a href="#camaras">Cámaras</a>
-        <a href="#cuellos de carburador">Accesorios de carburador</a>
+        <a href="#cuellodecarburador">Accesorios de carburador</a>
         <a href="#fundas">Fundas</a>
         <a href="#indumentaria">Indumentaria</a>
     </nav>
@@ -235,11 +237,11 @@
             </div>
         </section>
 
-        <section id="tornillos" class="product">
-            <div class="product-image" style="animation: cambiarImagenTornillos 12s infinite;"></div>
+        <section id="transmisión" class="product">
+            <div class="product-image" style="animation: cambiarImagentransmisión 12s infinite;"></div>
             <div>
-                <h2>Tornillos</h2>
-                <p>Descripción de los tornillos disponibles.</p>
+                <h2>transmisión</h2>
+                <p>Descripción de los transmisión disponibles.</p>
             </div>
         </section>
 
@@ -251,11 +253,11 @@
             </div>
         </section>
 
-        <section id="cuellos de carburador" class="product">
-            <div class="product-image" style="animation: cambiarImagencuellos de carburador 12s infinite;"></div>
+        <section id="cuellodecarburador" class="product">
+            <div class="product-image" style="animation: cambiarImagencuellodecarburador 12s infinite;"></div>
             <div>
-                <h2>cuellos de carburador</h2>
-                <p>Descripción de los cuellos de carburador de aire disponibles.</p>
+                <h2>cuello de carburador</h2>
+                <p>Descripción de los cuellodecarburador de aire disponibles.</p>
             </div>
         </section>
 
@@ -267,7 +269,8 @@
             </div>
         </section>
 
-        <section id="indumentaria" class="product">
+        <section id="indumentaria" class="product"
+            onclick="window.location.href='https://shop2034.github.io/ZONAMOTOSINDUMENTARIA/'">
             <div class="product-image" style="animation: cambiarImagenIndumentaria 12s infinite;"></div>
             <div>
                 <h2>Indumentaria para Motociclistas</h2>
